@@ -63,6 +63,19 @@
             }
           }
         },
+        "s-o": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "options": {
+            "browserTarget": "ng-arab:build",
+            "open": true,
+            "port": 5200
+          },
+          "configurations": {
+            "production": {
+              "browserTarget": "ng-arab:build:production"
+            }
+          }
+        },
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
@@ -123,6 +136,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "ng-arab"
+    }
+  },
+  "defaultProject": "ng-arab",
+  "cli": {
+    "analytics": "c410f208-7cb7-4df9-bf9d-4197e2188b9c"
+  }
 }

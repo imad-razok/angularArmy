@@ -1,3 +1,4 @@
+import { environment } from './../environments/environment.prod';
 import { Component } from '@angular/core';
 
 @Component({
@@ -6,5 +7,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'ng-arab';
+  msg: string = "hello world";
+  someColor: string = "color:#0f0";
+  constructor() {
+    console.log(environment.x);
+  }
+
+
 }
