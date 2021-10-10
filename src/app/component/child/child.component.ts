@@ -6,34 +6,38 @@ import { AfterContentChecked, AfterContentInit, AfterViewChecked, AfterViewInit,
   styleUrls: ['./child.component.scss']
 })
 export class ChildComponent implements OnChanges, OnInit, AfterContentInit, AfterContentChecked, AfterViewInit, AfterViewChecked, OnDestroy {
-  @Input() title: string = '';
+  @Input() set title(name: string) {
+    this.myTitle = name;
+  }
+  myTitle: string = '';
+
   constructor() {
-    console.log('constructor')
+    //console.log('constructor')
   }
   ngOnDestroy(): void {
-    console.log('On Destroy');
+    //console.log('On Destroy');
   }
   ngAfterViewChecked(): void {
-    console.log('After View Checked');
+    //console.log('After View Checked');
   }
   ngAfterViewInit(): void {
-    console.log(' After View Init')
+    //console.log(' After View Init')
   }
   ngAfterContentChecked(): void {
-    console.log('After Content Checked')
+    //console.log('After Content Checked')
   }
   ngAfterContentInit(): void {
-    console.log("after contenent init");
+    //console.log("after contenent init");
   }
 
   /*ngDoCheck(): void {
     console.log('do check')
   }*/
   ngOnInit(): void {
-    console.log('on init');
+    //console.log('on init');
   }
   ngOnChanges(changes: SimpleChanges): void {
-    console.log('change is ', changes);
+    //console.log('change is ', changes);
   }
 
 
