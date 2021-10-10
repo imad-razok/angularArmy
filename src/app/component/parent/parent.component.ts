@@ -12,7 +12,7 @@ export class ParentComponent implements AfterViewInit {
   @ViewChild(ChildComponent, { static: true }) myChildComponent: ChildComponent;
   @ViewChildren(ChildComponent) childs: QueryList<ChildComponent>;
   ngAfterViewInit(): void {
-    console.log(this.childs);
+    //console.log(this.childs);
   }
 
 }

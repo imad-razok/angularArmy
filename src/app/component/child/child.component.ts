@@ -1,4 +1,5 @@
-import { AfterContentChecked, AfterContentInit, AfterViewChecked, AfterViewInit, Component, DoCheck, Input, OnChanges, OnDestroy, OnInit, SimpleChanges } from '@angular/core';
+import { SubChildComponent } from './../sub-child/sub-child.component';
+import { AfterContentChecked, AfterContentInit, AfterViewChecked, AfterViewInit, Component, ContentChild, ContentChildren, DoCheck, Input, OnChanges, OnDestroy, OnInit, QueryList, SimpleChanges } from '@angular/core';
 
 @Component({
   selector: 'app-child',
@@ -10,6 +11,9 @@ export class ChildComponent implements OnChanges, OnInit, AfterContentInit, Afte
     this.myTitle = name;
   }
   myTitle: string = '';
+
+  @ContentChild(SubChildComponent) subChildContent: SubChildComponent;
+  @ContentChildren(SubChildComponent) subChildern: QueryList<SubChildComponent>;
 
   constructor() {
     //console.log('constructor')
@@ -27,7 +31,7 @@ export class ChildComponent implements OnChanges, OnInit, AfterContentInit, Afte
     //console.log('After Content Checked')
   }
   ngAfterContentInit(): void {
-    //console.log("after contenent init");
+    console.log("after contenent init", this.subChildContent);
   }
 
   /*ngDoCheck(): void {
