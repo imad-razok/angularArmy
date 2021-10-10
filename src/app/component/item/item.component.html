@@ -1,0 +1,9 @@
+<p>item works!</p>
+<input type="text" (keyup)="itemTitleInParent = $event.target.value" />
+
+<app-item-details
+  [itemTitleInChield]="itemTitleInParent"
+  (eventFromChild)="dataFromChild = $event"
+  #myChild
+></app-item-details>
+<p>{{ dataFromChild }}</p>
