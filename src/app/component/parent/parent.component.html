@@ -1,7 +1,6 @@
 <h1>parent works!</h1>
-<app-child [title]="myTitle">
-  <h1 class="demo1">Issam</h1>
-  <h3 id="demo2">Shimi</h3>
-</app-child>
+<<ng-container *ngFor="let child of [1, 2, 3, 4, 5, 6]; let i = index">
+  <app-child [title]="myTitle + ' ' + i"> </app-child>
+</ng-container>
 <hr />
 <button (click)="myTitle = 'parent title 2'">change title</button>
