@@ -9,9 +9,13 @@ import { Component } from '@angular/core';
 export class AppComponent {
   msg: string = "hello world";
   someColor: string = "color:#0f0";
+  username: string = "issam";
+  username1: string = "";
   constructor() {
     console.log(environment.x);
   }
-
+  doSomeThing() {
+    console.log('some thing to do');
+  }
 
 }

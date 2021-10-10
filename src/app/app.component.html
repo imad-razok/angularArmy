@@ -1,1 +1,12 @@
-<p [style]="someColor">{{ msg }}</p>
+<p bind-style="someColor">{{ msg }}</p>
+<button type="button" (click)="doSomeThing()">doSomeThing</button><br />
+<input
+  type="text"
+  [value]="username"
+  (input)="username = $event.target.value"
+/>
+<br /><br />
+<input type="text" [ngModel]="username1" (ngModelChange)="username1 = $event" />
+<br /><br />
+<input type="text" [(ngModel)]="username1" />
+<p>{{ username1 }}</p>
