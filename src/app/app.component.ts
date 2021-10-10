@@ -10,5 +10,5 @@ interface Student {
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-
+  name: string;
 }

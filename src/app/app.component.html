@@ -1,1 +1,7 @@
-<app-parent></app-parent>
+<p [appHighlight]="'red'">some text</p>
+
+<input appRandomColor type="text" />
+<br /><br />
+<input type="text" [(ngModel)]="name" />
+<div *ngIf="name">ng if</div>
+<div *appUnless="name">unless</div>
