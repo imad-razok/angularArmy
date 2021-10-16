@@ -1,16 +1,1 @@
-<p [appHighlight]="'red'">some text</p>
 
-<input appRandomColor type="text" />
-<br /><br />
-<input type="text" [(ngModel)]="name" />
-<div *ngIf="name; then thenBlock; else elseBlock">ng if</div>
-<br />
-<ng-template #thenBlock>in then block</ng-template>
-<ng-template #elseBlock>in else block</ng-template>
-
-<div *appUnless="name">unless</div>
-<ng-container *ngTemplateOutlet="thenBlock"></ng-container>
-<ng-template #myColor let-mColor="color">
-  <div>{{ mColor }} is my color</div>
-</ng-template>
-<ng-container *ngTemplateOutlet="myColor; context: ctx"></ng-container>

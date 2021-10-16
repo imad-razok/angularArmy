@@ -10,6 +10,5 @@ interface Student {
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  name: string;
-  ctx = { "color": "blue" };
+  title: string = "issam angular";
 }
