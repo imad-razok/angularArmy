@@ -11,4 +11,5 @@ interface Student {
 })
 export class AppComponent {
   name: string;
+  ctx = { "color": "blue" };
 }
