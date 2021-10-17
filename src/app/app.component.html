@@ -1,1 +1,23 @@
+<app-dashbord></app-dashbord>
+<hr />
+<p>upper case {{ "hello world" | uppercase }}</p>
+<p>lower case {{ "hello world" | lowercase }}</p>
+<p>title case {{ "hello world" | titlecase }}</p>
+<pre>
+  {{ jsonObject | json }}
+</pre>
+<hr />
+<p style="direction: rtl">{{ currentDate | date: "short":"ar-EG" }}</p>
+<p style="direction: rtl">{{ currentDate | date: "medium":"ar-EG" }}</p>
+<p style="direction: rtl">{{ currentDate | date: "long":"ar-EG" }}</p>
+<p style="direction: rtl">{{ currentDate | date: "full":"ar-EG" }}</p>
 
+<hr />
+<p>without Async Pipe</p>
+{{ promiseData }}
+<p>with Async Pipe</p>
+{{ promiseAsync | async }}
+<hr />
+{{ observableData | json }}
+<hr />
+{{ observableAsync | async | json }}
