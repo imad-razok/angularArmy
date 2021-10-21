@@ -1,0 +1,20 @@
+<div>
+  <form [formGroup]="myForm">
+    <label> first name : <input type="text" formControlName="first" /> </label>
+    <br />
+    <label> last name : <input type="text" formControlName="last" /> </label>
+    <br />
+    <label>
+      passeword : <input type="text" formControlName="pass" />
+      {{ password.errors | json }}</label
+    >
+    <br />
+    <label>
+      confirm password :
+      <input type="text" formControlName="confirmPass" />
+      {{ confirmPassword.errors | json }}
+    </label>
+    <br />
+  </form>
+</div>
+{{ myForm.errors | json }}

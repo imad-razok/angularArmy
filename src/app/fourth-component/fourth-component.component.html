@@ -1,0 +1,56 @@
+<div class="form-container">
+  <form [formGroup]="myForm">
+    <h4>Async Validator</h4>
+    <div class="form-body">
+      <div
+        class="form-control"
+        [ngClass]="{ 'form-control-loading': username.pending }"
+      >
+        Username *
+        <ng-container *ngIf="username.dirty">
+          <span
+            class="form-message form-message-error"
+            *ngIf="username.hasError('required')"
+            >This field is required
+          </span>
+          <span
+            class="form-message form-message-error"
+            *ngIf="username.hasError('usernameExist')"
+            >This username already exist
+          </span>
+          <span
+            class="form-message form-message-success"
+            *ngIf="username.valid && !username.pending"
+            >Wow nice username
+          </span>
+        </ng-container>
+        <input type="text" formControlName="username" />
+      </div>
+      <!--lazy validator-->
+      <div
+        class="form-control"
+        [ngClass]="{ 'form-control-loading': lazyUsername.pending }"
+      >
+        Username *
+        <ng-container *ngIf="lazyUsername.dirty">
+          <span
+            class="form-message form-message-error"
+            *ngIf="lazyUsername.hasError('required')"
+            >This field is required
+          </span>
+          <span
+            class="form-message form-message-error"
+            *ngIf="lazyUsername.hasError('usernameExist')"
+            >This username already exist
+          </span>
+          <span
+            class="form-message form-message-success"
+            *ngIf="lazyUsername.valid && !lazyUsername.pending"
+            >Wow nice username
+          </span>
+        </ng-container>
+        <input type="text" formControlName="lazyUsername" />
+      </div>
+    </div>
+  </form>
+</div>
