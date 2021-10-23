@@ -1,3 +1,5 @@
+import { CoreModule } from '@app/core.module';
+import { ShardModule } from '@app/shard.module';
 import { BrowserModule } from '@angular/platform-browser';
 import { LOCALE_ID, NgModule } from '@angular/core';
 
@@ -14,7 +16,8 @@ registerLocaleData(localeAr, 'ar');
   imports: [
     BrowserModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    ShardModule, CoreModule
   ],
   providers: [
     { provide: LOCALE_ID, useValue: 'ar-EG' }
