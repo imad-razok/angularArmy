@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
 import { Meta, Title } from '@angular/platform-browser';
-import { LogService } from '@app/services/log.service';
 
 interface Student {
   id: number;
@@ -13,14 +12,11 @@ interface Student {
 })
 export class AppComponent {
   myTitle: string = "issam angular";
-  constructor(private logServ: LogService, private title: Title, private meta: Meta) {
+  constructor(private title: Title, private meta: Meta) {
     console.log(title.getTitle());
     this.title.setTitle('issam');
   }
-  log() {
-    this.logServ.log();
 
-  }
 }
 
 
