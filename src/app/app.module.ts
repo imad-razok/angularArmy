@@ -7,17 +7,22 @@ import { registerLocaleData } from '@angular/common';
 import { AppComponent } from './app.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import localeAr from '@angular/common/locales/ar';
+import { ParentComponent } from './parent/parent.component';
+import { ChildComponent } from './child/child.component';
 
 registerLocaleData(localeAr, 'ar');
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    ParentComponent,
+    ChildComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     ReactiveFormsModule,
-    ShardModule, CoreModule
+    ShardModule,
+    CoreModule
   ],
   providers: [
     { provide: LOCALE_ID, useValue: 'ar-EG' }
