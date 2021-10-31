@@ -4,7 +4,10 @@
   "compilerOptions": {
     "baseUrl": "./src",
     "paths": {
-      "@app/*":["app/shard/*","app/core/*"]
+      "@app/*":["app/shard/*","app/core/*"],
+      "@modules/*" :["app/modules/products/*"],
+      "@core/*" :["app/core/guards/*"],
+
     },
     "strictNullChecks": true,
     "outDir": "./dist/out-tsc",

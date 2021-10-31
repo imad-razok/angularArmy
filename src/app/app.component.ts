@@ -16,7 +16,9 @@ export class AppComponent {
     console.log(title.getTitle());
     this.title.setTitle('issam');
   }
-
+  login() {
+    localStorage.setItem("isAuth", "true");
+  }
 }
 
 
