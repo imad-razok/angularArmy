@@ -13,12 +13,9 @@ interface Student {
 export class AppComponent {
   myTitle: string = "issam angular";
   constructor(private title: Title, private meta: Meta) {
-    console.log(title.getTitle());
     this.title.setTitle('issam');
   }
-  login() {
-    localStorage.setItem("isAuth", "true");
-  }
+
 }
 
 
